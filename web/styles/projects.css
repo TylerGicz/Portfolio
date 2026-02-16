@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #254761;
+    --secondary-color: #829FB6;
+    --accent-color: #4C708B;
+    --background-color: #0C2436;
+    --dark-background-color: #031E33;
+    --text-color: #CED9E0;
+    --white: #ffffff;
+    --black: #000000;
+    --transparent-white: #ffffff80;
+    --transparent-black: #00000080;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--dark-background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.topnav {
+    overflow: hidden;
+    padding: 5px;
+    align-items: center;
+}
+
+.topnav ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+}
+
+.topnav li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.topnav li a {
+    all: unset;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.topnav li a:hover {
+    color: var(--accent-color);
+    transition: 0.2s;
+}
+
+.intro {
+    margin: 100px 10%;
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.project-card {
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+}
+
+.project-card p {
+    margin: 10px 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    border: 2px solid var(--white);
+    color: var(--primary-color);
+    background-color: var(--white);
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin-top: 50px;
+}
+
+footer h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-list li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1em;
+}
+
+.contact-list li a:hover {
+    color: var(--accent-color);
+}
+
+.contact-list li a i {
+    font-size: 1.2em;
+}
