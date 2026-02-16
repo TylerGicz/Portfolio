@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #254761;
+    --secondary-color: #829FB6;
+    --accent-color: #4C708B;
+    --background-color: #0C2436;
+    --dark-background-color: #031E33;
+    --text-color: #CED9E0;
+    --white: #ffffff;
+    --black: #000000;
+    --transparent-white: #ffffff80;
+    --transparent-black: #00000080;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--dark-background-color);
+    overflow-x: hidden;
+}
+
+.topnav {
+    overflow: hidden;
+    padding: 5px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--dark-background-color);
+    z-index: 2;
+}
+
+.topnav ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+}
+
+.topnav li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.topnav li a {
+    all: unset;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.topnav li a:hover {
+    color: var(--accent-color);
+    transition: 0.2s;
+}
+
+.intro {
+    margin: 250px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+
+/* Section container */
+.feature {
+    margin: 100px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(16px, 4vw, 32px);
+    padding: clamp(24px, 6vw, 48px);
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--background-color), var(--primary-color));
+}
+
+.feature__left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.feature__cta {
+    display: flex;
+    justify-content: center;
+    /* centers horizontally */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    width: 200px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    border: 2px solid var(--white);
+    border-radius: 12px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--black);
+    color: var(--white);
+    transition: 0.2s;
+}
+
+.feature__right {
+    display: flex;
+    justify-content: center;
+}
+
+.feature__image {
+    max-width: 75%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.feature__image.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    margin-top: 50px;
+}
+
+footer h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-list li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1em;
+}
+
+.contact-list li a:hover {
+    color: var(--accent-color);
+}
+
+.contact-list li a i {
+    font-size: 1.2em;
+}
